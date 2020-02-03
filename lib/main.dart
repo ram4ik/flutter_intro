@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+
+  // Visual Helpers:
+
+  // 1
+  debugPaintSizeEnabled = true;
+
+  // 2
+  debugPaintBaselinesEnabled = true;
+
+  // 3
+  debugPaintPointersEnabled = true;
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
+      // Debug grid
+      debugShowMaterialGrid: true,
+      
       title: 'Counter App',
       home: MyHomePage(title: 'Counter App Home Page'),
     );
