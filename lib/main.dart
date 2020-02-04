@@ -6,13 +6,13 @@ void main() {
   // Visual Helpers:
 
   // 1
-  debugPaintSizeEnabled = true;
+  debugPaintSizeEnabled = false;
 
   // 2
-  debugPaintBaselinesEnabled = true;
+  debugPaintBaselinesEnabled = false;
 
   // 3
-  debugPaintPointersEnabled = true;
+  debugPaintPointersEnabled = false;
 
   runApp(MyApp());
 }
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       // Debug grid
-      debugShowMaterialGrid: true,
+      debugShowMaterialGrid: false,
       
       title: 'Counter App',
       home: MyHomePage(title: 'Counter App Home Page'),

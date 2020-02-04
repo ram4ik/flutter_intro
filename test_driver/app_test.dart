@@ -36,5 +36,13 @@ void main() {
       // Then, verify the counter text is incremented by 1.
       expect(await driver.getText(counterTextFinder), "1");
     });
+
+    test('increment the counter by 42', () async {
+      for (var i=1; i < 42; i++) {
+        await driver.tap(buttonFinder);
+      }
+
+      expect(await driver.getText(counterTextFinder), "42");
+    });
   });
 }
